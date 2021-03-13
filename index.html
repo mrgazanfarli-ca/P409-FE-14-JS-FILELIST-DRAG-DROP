@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/f872fe4fc3.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    .to-drop-in {
+        min-height: 100px;
+        padding: 16px;
+        border: 1px solid #db2147;
+    }
+
+    .color-circle {
+        width: 52px;
+        height: 52px;
+        display: inline-block;
+        border-radius: 50%;
+    }
+
+    .color-drop {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background-color: red;
+    }
+
+    .image-drop-area {
+        height: 400px;
+        border-radius: 8px;
+        border: 2px dashed #477774;
+        transition: .2s;
+    }
+
+    .image-drop-area.active {
+        border-color: #db2147;
+    }
+
+    #image-list .img-div {
+        width: calc(20% - 16px);
+        height: 250px;
+        margin-right: 20px;
+        margin-bottom: 16px;
+        border-radius: 8px;
+        position: relative;
+    }
+
+    .img-div img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+
+    .img-div .icon-div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, .5);
+        opacity: 0;
+        backdrop-filter: blur(10px);
+        transition: .25s;
+        border-radius: 8px;
+    }
+
+    #image-list img:nth-child(5n) {
+        margin-right: 0;
+    }
+
+    .img-div:hover .icon-div {
+        opacity: 1;
+    }
+
+    .icon-div i {
+        color: #DA4F17;
+        font-size: 36px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="image-drop-area"></div>
+            </div>
+            <div class="col-12 mt-4">
+                <div id="image-list" class="d-flex flex-wrap"></div>
+            </div>
+        </div>
+        <!-- <div class="row mt-5">
+            <div class="col-6">
+                <ul class="list-group to-drag-from">
+                    <li class="list-group-item mb-3" id="draggable-1" draggable="true">Blue</li>
+                    <li class="list-group-item mb-3" id="draggable-2" draggable="true">Item 2</li>
+                    <li class="list-group-item mb-3" id="draggable-3" draggable="true">Item 3</li>
+                </ul>
+
+                <div class="row">
+                    <div class="col-2">
+                        <span data-red="238" data-green="84" data-blue="39" style="background-color: rgb(238, 84, 39);"
+                            class="color-circle" draggable="true">
+
+                        </span>
+                    </div>
+                    <div class="col-2">
+                        <span data-red="32" data-green="131" data-blue="199"
+                            style="background-color: rgb(32, 131, 199);" class="color-circle" draggable="true">
+
+                        </span>
+                    </div>
+                    <div class="col-2">
+                        <span data-red="60" data-green="69" data-blue="75" style="background-color: rgb(60, 69, 75);"
+                            class="color-circle" draggable="true">
+
+                        </span>
+                    </div>
+                    <div class="col-2">
+                        <span data-red="142" data-green="203" data-blue="34"
+                            style="background-color: rgb(142, 203, 34);" class="color-circle" draggable="true">
+
+                        </span>
+                    </div>
+                    <div class="col-2">
+                        <span data-red="135" data-green="43" data-blue="167"
+                            style="background-color: rgb(135, 43, 167);" class="color-circle" draggable="true">
+
+                        </span>
+                    </div>
+                    <div class="col-2">
+                        <span data-red="0" data-green="255" data-blue="0" style="background-color: rgb(0, 255, 0);"
+                            class="color-circle" draggable="true">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 d-flex justify-content-center">
+                <ul class="list-group to-drop-in">
+
+                </ul>
+                <div class="color-drop" data-red="255" data-green="0" data-blue="0"></div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <input type="file" class="form-control file-input">
+            </div>
+        </div> -->
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
